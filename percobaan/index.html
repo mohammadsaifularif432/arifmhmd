@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .heart {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: auto;
+            animation: beat 1.2s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            top: 40px;
+            width: 100px;
+            height: 150px;
+            background: white;
+            border-radius: 100px 100px 0 0;
+        }
+
+        .heart::before {
+            left: 80px;
+            transform: rotate(45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(-45deg);
+            transform-origin: 100% 100%;
+        }
+
+        .hands {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 85px;
+            z-index: 2;
+            animation: handMove 2s infinite ease-in-out;
+        }
+
+        h1 {
+            margin-top: 40px;
+            color: white;
+            font-size: 38px;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        p {
+            margin-top: 10px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .love {
+            position: absolute;
+            font-size: 25px;
+            animation: float 5s linear infinite;
+        }
+
+        .love:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .love:nth-child(2) {
+            left: 30%;
+            animation-delay: 1s;
+        }
+
+        .love:nth-child(3) {
+            left: 70%;
+            animation-delay: 2s;
+        }
+
+        .love:nth-child(4) {
+            left: 90%;
+            animation-delay: 3s;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes handMove {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                bottom: -50px;
+                opacity: 0;
+                transform: translateX(0) rotate(0);
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            100% {
+                bottom: 110%;
+                opacity: 0;
+                transform: translateX(80px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Love yang terbang -->
+    <div class="love">❤️</div>
+    <div class="love">💕</div>
+    <div class="love">💗</div>
+    <div class="love">💖</div>
+
+    <div class="container">
+
+        <!-- Tangan membentuk love -->
+        <div class="heart">
+            <div class="hands">🫶</div>
+        </div>
+
+        <h1>I Love You Rifda❤️</h1>
+        <p> Selalu semangat yaa sayang</p>
+
+    </div>
+
+</body>
+</html>
